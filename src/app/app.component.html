@@ -1,0 +1,14 @@
+
+<div>Material Angular datepicker</div>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker"  
+  [min]="minDate()" [(ngModel)]="date" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+</mat-form-field>
+
+<div></div>
+<div>Default Date Control</div>
+<input type="date" class="form-control" 
+      name="dob" [min]="minDate()" [ngModel]="date | date:'yyyy-MM-dd'">
+    
